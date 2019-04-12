@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../img/pristan.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.form {
+  width: 50%;
+  margin: 300px auto;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-filter: none;
+          filter: none;
+  position: relative;
+  z-index: 10;
+}
+
+form:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/pristan.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 47%;
+  background-size: 200%;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  z-index: 1;
+  opacity: 50;
+}
+
+form .return {
+  z-index: 10;
+}
+
+form input {
+  width: 25%;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #ffffff00;
+  z-index: 10;
+  display: block;
+  margin: 20px auto;
+  color: #716e70;
+  border: 2px solid #716e70;
+}
+
+form input:hover {
+  background-color: white;
+  outline: none;
+}
+
+form input:focus {
+  background-color: white;
+  outline: none;
+}
+
+form .radiobutton {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .buttonForm {
+  z-index: 10;
+}
+/*# sourceMappingURL=style.css.map */

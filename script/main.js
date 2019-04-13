@@ -32,10 +32,10 @@ window.onload = function(){
     })
 
     document.getElementsByName("enter")[0].addEventListener("click", function(e){
-        e.preventDefault();
-        console.log("Click");
-        phoneCheck();
-        paswordCheck();
+        e.preventDefault();        
+        if (phoneCheck() && paswordCheck()){
+            console.log("Click");
+        }
     })
 
 

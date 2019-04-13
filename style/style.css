@@ -139,6 +139,16 @@ form input:focus {
   outline: none;
 }
 
+form h2 {
+  display: block;
+  width: 330px;
+  margin: 0 auto;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: red;
+  z-index: 10;
+}
+
 form .radiobutton {
   z-index: 10;
   display: -webkit-box;

@@ -9,11 +9,19 @@ body {
   background-position: center center;
   background-size: cover;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form {
   width: 50%;
-  margin: 300px auto;
 }
 
 form {
@@ -41,7 +49,7 @@ form:after {
   height: 100%;
   background-image: url("../img/pristan.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 47%;
+  background-position: 50% 50%;
   background-size: 200%;
   -webkit-filter: blur(5px);
           filter: blur(5px);
@@ -51,10 +59,64 @@ form:after {
 
 form .return {
   z-index: 10;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 20px;
+  padding-left: 80px;
+  cursor: pointer;
+  position: relative;
+}
+
+form .return:after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 48px;
+  padding: 5px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+form .return::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 48px;
+  width: 25px;
+  height: 1px;
+  background-color: white;
+}
+
+form .rabbitContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  z-index: 10;
+  background-color: orange;
+  border-radius: 50%;
+}
+
+form .rabbitContainer .rabbit {
+  padding: 50px;
+  background-image: url("../img/playboy-rabit.png");
+  background-repeat: no-repeat;
+  background-position: 19%;
+  background-size: contain;
 }
 
 form input {
-  width: 25%;
+  width: 330px;
   padding: 10px;
   border-radius: 25px;
   background-color: #ffffff00;
@@ -67,11 +129,13 @@ form input {
 
 form input:hover {
   background-color: white;
+  border: 2px solid white;
   outline: none;
 }
 
 form input:focus {
   background-color: white;
+  border: 2px solid white;
   outline: none;
 }
 
@@ -83,6 +147,69 @@ form .radiobutton {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 340px;
+  margin: 20px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form .radiobutton .checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+form .radiobutton .checkbox + label {
+  position: relative;
+  padding: 0 0 0 80px;
+  color: white;
+  cursor: pointer;
+}
+
+form .radiobutton .checkbox + label:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 66px;
+  height: 27px;
+  border-radius: 13px;
+  border: 1px solid #716e70;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+form .radiobutton .checkbox + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  width: 40px;
+  height: 28px;
+  border-radius: 10px;
+  background: #716e70;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+form .radiobutton .checkbox:checked + label:before {
+  border: 1px solid white;
+  background: none;
+}
+
+form .radiobutton .checkbox:checked + label:after {
+  left: 27px;
+  background: white;
+}
+
+form .radiobutton .checkbox:focus + label:before {
+  border: 1px solid white;
+}
+
+form .radiobutton a {
+  color: white;
 }
 
 form .buttonForm {

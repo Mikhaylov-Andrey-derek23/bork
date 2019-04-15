@@ -1,3 +1,9 @@
+@mixin screen ($media) {
+    @if $media == mobile {
+        @media (max-width: 560px) {@content};
+    }
+}
+
 *{
     margin: 0;
     padding: 0; 
@@ -15,6 +21,9 @@ body{
 }
 .form{
     width: 50%;
+    @include screen(mobile){
+		width: 100%;
+	}
    
 }
 form{
@@ -49,6 +58,9 @@ form{
             padding-left: 80px;
             cursor: pointer;
             position: relative;
+            @include screen(mobile){
+                padding-left: 35px;
+            }
             &:after{
                 content: "";
                 position: absolute;
@@ -58,6 +70,9 @@ form{
                 border-left: 1px solid white;
                 border-bottom:  1px solid white;
                 transform: rotate(45deg);
+                @include screen(mobile){
+                    left: 5px;
+                }
 
             }
             &::before{
@@ -68,6 +83,9 @@ form{
                 width: 25px;
                 height: 1px;
                 background-color: white;
+                @include screen(mobile){
+                    left: 5px;
+                }
             }
         }
         .rabbitContainer{
@@ -109,6 +127,9 @@ form{
                 border: 2px solid white;
                 outline: none; 
             }
+            @include screen(mobile){
+                width: 90%;
+            }
             
         }
         h2{
@@ -120,6 +141,18 @@ form{
             color: red;
             z-index: 10;
         }
+        h3{
+            display: block;
+            width: 300px;
+            margin: 0 auto;
+            padding: 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            background: green;
+            z-index: 10;
+        }
         .radiobutton{
             z-index: 10;
             display: flex;
@@ -127,6 +160,9 @@ form{
             width: 340px;
             margin: 20px auto;
             justify-content: space-between;
+            @include screen(mobile){
+                width: 90%;
+            }
 
             .checkbox {
                 position: absolute;

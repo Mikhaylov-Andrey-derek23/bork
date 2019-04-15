@@ -20,6 +20,18 @@ function paswordCheck(){
         return false;
     }
 }
+function ajaxRequest(){
+    $.ajax({
+        type:'POST',
+        url:'enter.php',
+        data: 'data='+$('form').find("[name='phone']").val() + ',' + $('form').find("[name='pasword']").val() + ';',
+        success:function(msg){
+            if(msg ==1){
+                $('form').html("<h3>Это успех</h3>");
+            }
+        }
+    })
+}
 window.onload = function(){
     maskPhone(document.getElementsByName("phone")[0])
 
@@ -35,6 +47,8 @@ window.onload = function(){
         e.preventDefault();        
         if (phoneCheck() && paswordCheck()){
             console.log("Click");
+            ajaxRequest();
+
         }
     })
 
